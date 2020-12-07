@@ -4,7 +4,7 @@
 /* variables */
 :root {
 	font-size: 16px;
-	--primary-font: "Arial", sans-serif;
+	--primary-font: "Georgia", sans-serif;
 }
 
 /* base styles */
@@ -20,4 +20,5 @@ html {
 
 .App {
 	text-align: center;
+	font-family: var(--primary-font);
 }
