@@ -17,13 +17,11 @@ html {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	text-align: center;
 }
 
 /* main layout */
 .app-container {
 	display: block;
-	margin: 0 1rem;
 }
 
 /* typography */
@@ -44,5 +42,8 @@ body {
 	background-position: top left;
 	background-image: url("./assets/img-test.jpg");
 	width: 100%;
-	height: 600px;
+	height: 50vh;
+}
+.article__text-wrapper {
+	margin: 0 1rem;
 }
