@@ -3,7 +3,7 @@ import "../App.css";
 
 function Navigation() {
 	return (
-		<div className="navigation-site">
+		<div className="navigation-container">
 			<h1>Navigation</h1>
 		</div>
 	);

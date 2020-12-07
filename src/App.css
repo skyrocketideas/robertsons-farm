@@ -18,7 +18,8 @@ html {
 	padding: 0;
 }
 
-.App {
+.app-container {
 	text-align: center;
 	font-family: var(--primary-font);
+	background-color: yellow;
 }

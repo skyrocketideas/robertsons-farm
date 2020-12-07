@@ -3,7 +3,7 @@ import "../App.css";
 
 function Footer() {
 	return (
-		<div className="footer-site">
+		<div className="footer-container">
 			<h1>Footer</h1>
 		</div>
 	);
