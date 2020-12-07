@@ -17,11 +17,13 @@ html {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-}
-.app-container {
 	text-align: center;
-	font-family: var(--primary-font);
-	background-color: yellow;
+}
+
+/* main layout */
+.app-container {
+	display: block;
+	margin: 0 1rem;
 }
 
 /* typography */
