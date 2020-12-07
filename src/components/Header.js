@@ -1,11 +1,12 @@
 import React from "react";
+import Button from "./Button";
 import "../App.css";
 
 function Header() {
 	return (
 		<div className="header-container">
 			<div className="article">
-				<div className="article__featured-image">Image</div>
+				<div className="article__feat-img">Image</div>
 				<h2 className="article__category">Category</h2>
 				<h1 className="article__title">Title</h1>
 				<p className="article__excerpt">
@@ -14,7 +15,7 @@ function Header() {
 					quod dicta, voluptas eius animi quae reiciendis possimus voluptate
 					molestias dolore.
 				</p>
-				<button className="article__button">Button</button>
+				<Button />
 			</div>
 		</div>
 	);
