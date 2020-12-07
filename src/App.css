@@ -5,21 +5,42 @@
 :root {
 	font-size: 16px;
 	--primary-font: "Georgia", sans-serif;
+	--secondary-font: "Arial", sans-serif;
+	--tertiary-font: fantasy;
 }
 
 /* base styles */
 html {
 	scroll-behavior: smooth;
 }
-
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
-
 .app-container {
 	text-align: center;
 	font-family: var(--primary-font);
 	background-color: yellow;
+}
+
+/* typography */
+h1 {
+	font-family: var(--primary-font);
+}
+h2 {
+	font-family: var(--tertiary-font);
+}
+body {
+	font-family: var(--secondary-font);
+}
+
+/* article styles */
+.article__feat-img {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-image: url("./assets/img-test.jpg");
+	width: 100%;
+	height: 600px;
 }
