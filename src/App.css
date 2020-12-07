@@ -23,7 +23,3 @@ html {
 	font-family: var(--primary-font);
 	background-color: yellow;
 }
-
-button {
-	width: 100%;
-}
