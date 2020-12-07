@@ -24,7 +24,6 @@ html {
 	background-color: yellow;
 }
 
-.header-container {
-	height: 100vh;
-	background-color: pink;
+button {
+	width: 100%;
 }
