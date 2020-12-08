@@ -6,7 +6,7 @@ import "../styles/navigation.css";
 
 function Navigation() {
 	return (
-		<div className="navbar">
+		<div className="nav-container">
 			<Navbar collapseOnSelect bg="light" expand="lg">
 				<Navbar.Brand
 					eventKey="1"
@@ -20,7 +20,7 @@ function Navigation() {
 				<Navbar.Toggle
 					className="navbar__toggle"
 					aria-controls="basic-navbar-nav"
-				/>
+				></Navbar.Toggle>
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="ml-auto">
 						<Nav.Link
