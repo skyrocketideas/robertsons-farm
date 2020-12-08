@@ -1,11 +1,13 @@
 import React from "react";
 import Button from "../components/Button";
+import ArticleList from "../components/ArticleList";
 import "../App.css";
 
 function Blog() {
 	return (
 		<div>
 			<h1>Blog</h1>
+			<ArticleList />
 			<article className="blog-post">
 				<div className="blog-post__feat-img"></div>
 				<div className="blog-post__text-wrapper">
