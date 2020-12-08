@@ -1,36 +1,25 @@
-import React, { useEffect, useState } from "react";
-import ArticleListLoading from "../components/ArticleListLoading";
-import "../App.css";
+import React from "react";
+import { Link } from "react-router-dom";
 
-function ArticleList() {
-	const ListLoading = ArticleListLoading(List);
-	const [appState, setAppState] = useState({
-		loading: false,
-		repos: null,
-	});
+const ArticleList = function (props) {
+	const { repos } = props;
 
-	useEffect(
-		function () {
-			setAppState({ loading: true });
-			const apiUrl =
-				"https://kokkedalpaavej.dk/blog/wp-json/wp/v2/posts/?_embed&per_page=100";
-			fetch(apiUrl)
-				.then((res) => {
-					return res.json();
-				})
-				.then((repos) => {
-					console.log("The data ...", repos);
-					setAppState({ loading: false, repos: repos });
-				});
-		},
-		[setAppState]
-	);
-
+	if (!repos || repos.length === 0) return <p>No repository, sorry.</p>;
 	return (
-		<div>
-			<ListLoading isLoading={appState.loading} repos={appState.repos} />
-		</div>
+		<ul>
+			{repos.map(function (repo) {
+				return (
+					<li key={repo.id}>
+						<h3
+							dangerouslySetInnerHTML={{
+								__html: `${repo.title.rendered}`,
+							}}
+						></h3>
+					</li>
+				);
+			})}
+		</ul>
 	);
-}
+};
 
 export default ArticleList;
