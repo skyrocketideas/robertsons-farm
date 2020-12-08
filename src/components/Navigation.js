@@ -32,6 +32,24 @@ function Navigation() {
 						>
 							About
 						</Nav.Link>
+						<Nav.Link
+							eventKey="3"
+							as={Link}
+							className="navbar__link"
+							activeClassName="navbar__link--active"
+							to="/contact"
+						>
+							Contact
+						</Nav.Link>
+						<Nav.Link
+							eventKey="4"
+							as={Link}
+							className="navbar__link"
+							activeClassName="navbar__link--active"
+							to="/blog"
+						>
+							Blog
+						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
