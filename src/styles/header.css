@@ -2,12 +2,3 @@
 	height: 100vh;
 	background-color: pink;
 }
-
-.article__feat-img {
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: top left;
-	background-image: url("../assets/img-test.jpg");
-	width: 100%;
-	height: 600px;
-}

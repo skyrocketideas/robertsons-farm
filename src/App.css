@@ -7,6 +7,7 @@
 	--primary-font: "Georgia", sans-serif;
 	--secondary-font: "Arial", sans-serif;
 	--tertiary-font: cursive;
+	--margin: 1rem;
 }
 
 /* base styles */
@@ -45,5 +46,5 @@ body {
 	height: 50vh;
 }
 .article__text-wrapper {
-	margin: 0 1rem;
+	margin: 0 var(--margin);
 }
