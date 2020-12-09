@@ -1,12 +1,12 @@
 import React from "react";
 import "../App.css";
 
-function Contact() {
+function BlogItem() {
 	return (
 		<div>
-			<h1>Contact</h1>
+			<h1>Blog Item</h1>
 		</div>
 	);
 }
 
-export default Contact;
+export default BlogItem;
