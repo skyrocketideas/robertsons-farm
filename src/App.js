@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
+import BlogItem from "./pages/BlogItem";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
@@ -17,7 +18,8 @@ function App() {
 					<Route path="/" exact component={Home} />
 					<Route path="/about" component={About} />
 					<Route path="/contact" component={Contact} />
-					<Route path="/blog" component={Blog} />
+					<Route path="/blog" exact component={Blog} />
+					<Route path="/blog/:id" component={BlogItem} />
 				</Switch>
 				<Footer />
 			</div>
