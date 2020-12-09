@@ -1,11 +1,13 @@
 import React from "react";
 import "../App.css";
 import "../styles/home.css";
+import ArticleListData from "../components/ArticleListData";
 
 function Home() {
 	return (
-		<div>
+		<div className="testy">
 			<h1>Home</h1>
+			<ArticleListData />
 			<section className="home-section">
 				<h2>First Section</h2>
 			</section>
