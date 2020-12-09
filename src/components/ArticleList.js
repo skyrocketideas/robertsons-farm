@@ -24,9 +24,7 @@ const ArticleList = function (props) {
 								__html: `${repo.title.rendered}`,
 							}}
 						></h1>
-						<h3 className="blog-post__author">
-							{repo._embedded["author"][0].name}
-						</h3>
+						<h3 className="blog-post__author">{repo.written_by}</h3>
 						<h4 className="blog_post__date">{repo.date}</h4>
 					</li>
 				);
