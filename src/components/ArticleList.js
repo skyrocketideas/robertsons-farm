@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../App.css";
 import "../styles/articleList.css";
 
 const ArticleList = function (props) {
 	const { repos } = props;
-
 	if (!repos || repos.length === 0) return <p>No repository, sorry.</p>;
 	return (
 		<ul className="blog-list">

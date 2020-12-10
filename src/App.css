@@ -20,6 +20,14 @@ html {
 	padding: 0;
 }
 
+/* link styles */
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+
 /* main layout */
 .app-container {
 	display: block;
@@ -35,9 +43,4 @@ h2 {
 }
 body {
 	font-family: var(--secondary-font);
-}
-
-.first-section {
-	display: grid;
-	position: relative;
 }

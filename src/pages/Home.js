@@ -8,10 +8,11 @@ function Home() {
 		<div className="testy">
 			<h1>Home</h1>
 			<section className="home-section">
-				<ArticleListData className="first-section" />
+				<h2>Featured</h2>
 			</section>
 			<section className="home-section">
 				<h2>Latest Articles</h2>
+				<ArticleListData />
 			</section>
 			<section className="home-section">
 				<h2>Shop</h2>
