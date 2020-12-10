@@ -6,8 +6,7 @@ import "../styles/home.css";
 function Home() {
 	return (
 		<div className="testy">
-			<h1>Home</h1>
-			<section className="home-section">
+			<section className="home-section feature-section">
 				<h2>Featured</h2>
 			</section>
 			<section className="home-section">
