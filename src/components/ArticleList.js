@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/articleList.css";
 
 const ArticleList = function (props) {
 	const { repos } = props;

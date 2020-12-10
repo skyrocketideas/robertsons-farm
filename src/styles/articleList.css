@@ -1,0 +1,26 @@
+.blog-list {
+	scroll-behavior: smooth;
+	overflow-x: scroll;
+	scroll-snap-type: x proximity;
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: 1rem;
+	grid-auto-flow: column;
+	grid-auto-columns: 60vw;
+	padding-bottom: 2rem;
+}
+
+.blog-list::before,
+.blog-list:after {
+	content: "";
+	width: 1rem;
+}
+
+.blog-post:first-child {
+	background-color: orange;
+}
+
+.blog-post {
+	scroll-snap-align: center;
+	padding: 1rem;
+}

@@ -49,3 +49,8 @@ body {
 .blog-post__text-wrapper {
 	margin: 0 var(--margin);
 }
+
+.first-section {
+	display: grid;
+	position: relative;
+}
