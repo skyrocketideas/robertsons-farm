@@ -1,12 +1,12 @@
 /* fonts import */
-@import url("https://fonts.googleapis.com/css2?family=Donegal+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300;400&family=Caveat&family=Donegal+One&display=swap");
 
 /* variables */
 :root {
 	font-size: 16px;
-	--primary-font: "Georgia", sans-serif;
+	--primary-font: "Bellota Text", cursive;
 	--secondary-font: "Donegal One", serif;
-	--tertiary-font: cursive;
+	--tertiary-font: "Caveat", cursive;
 	--margin: 1rem;
 	--blog-category: 1rem;
 	--blog-title: 1.5rem;
@@ -48,7 +48,7 @@ h1 {
 	font-family: var(--secondary-font);
 }
 h2 {
-	font-family: var(--primary-font);
+	font-family: var(--secondary-font);
 }
 h3 {
 	font-family: var(--secondary-font);
@@ -57,5 +57,5 @@ h4 {
 	font-family: var(--secondary-font);
 }
 body {
-	font-family: var(--secondary-font);
+	font-family: var(--primary-font);
 }

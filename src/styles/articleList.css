@@ -39,6 +39,7 @@
 	color: var(--color-1-normal);
 }
 .blog-post__category {
+	font-family: var(--tertiary-font);
 	font-size: var(--blog-category);
 }
 .blog-post__title {
