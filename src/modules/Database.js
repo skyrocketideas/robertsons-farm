@@ -1,6 +1,6 @@
 const GetFeaturedArticle = async () => {
 	const featuredArticle = await fetch(
-		"https://lovethatwillnotdie.com/wp_robertsons/wp-json/wp/v2/posts/?_embed&per_page=1"
+		"https://lovethatwillnotdie.com/wp_robertsons/wp-json/wp/v2/posts/?_embed&sticky=true"
 	);
 	const response = await featuredArticle.json();
 	return response;

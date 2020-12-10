@@ -11,9 +11,9 @@ function Home() {
 		const getData = async () => {
 			const Data = await Database.GetFeaturedArticle();
 			setFeature(Data);
-			// console.log("test", Data);
+			console.log("featured article", Data);
 		};
-		getData(feature);
+		getData(feature.feature);
 		return;
 	}, []);
 
@@ -21,7 +21,17 @@ function Home() {
 		<div>
 			<section className="home-section feature-section">
 				<h2>Featured</h2>
-				<h1>{feature[0].author}</h1>
+				<h1>{feature[0] && feature[0].written_by}</h1>
+				<div
+					className="blog-post__feat-img"
+					style={{
+						backgroundImage: `url(${
+							feature[0] &&
+							feature[0]._embedded["wp:featuredmedia"][0].media_details.sizes
+								.full.source_url
+						})`,
+					}}
+				></div>
 			</section>
 			<section className="home-section articles-section">
 				<h2>Latest Articles</h2>
