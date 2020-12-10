@@ -23,6 +23,7 @@ const ArticleList = function (props) {
 									{repo._embedded["wp:term"][0][0].name}
 								</h2>
 								<h1
+									className="blog-post__title"
 									dangerouslySetInnerHTML={{
 										__html: `${repo.title.rendered}`,
 									}}

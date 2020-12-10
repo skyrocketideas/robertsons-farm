@@ -34,5 +34,17 @@
 	height: 30vh;
 }
 .blog-post__text-wrapper {
-	margin: 0 var(--margin);
+	margin-top: var(--margin);
+}
+.blog-post__category {
+	font-size: var(--blog-category);
+}
+.blog-post__title {
+	font-size: var(--blog-title);
+}
+.blog-post__author {
+	font-size: var(--blog-author);
+}
+.blog-post__date {
+	font-size: var(--blog-date);
 }
