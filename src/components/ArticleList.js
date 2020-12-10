@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../App.css";
+import "../styles/articleList.css";
 
 const ArticleList = function (props) {
 	const { repos } = props;
-
 	if (!repos || repos.length === 0) return <p>No repository, sorry.</p>;
 	return (
-		<ul>
+		<ul className="blog-list">
 			{repos.map(function (repo) {
 				return (
 					<li key={repo.id} className="blog-post">
