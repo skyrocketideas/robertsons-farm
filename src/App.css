@@ -11,7 +11,11 @@
 	--blog-category: 1rem;
 	--blog-title: 1.5rem;
 	--blog-author: 1rem;
-	--blog-date: 0.1rem;
+	--blog-date: 1rem;
+	--base-color-1: 0;
+	--color-1-normal: hsla(var(--base-color-1), 0%, 0%, 100%);
+	--base-color-2: 46;
+	--color-2-normal: hsla(var(--base-color-2), 100%, 50%, 100%);
 }
 
 /* base styles */
@@ -49,7 +53,7 @@ h3 {
 	font-family: var(--secondary-font);
 }
 h4 {
-	font-family: var(--tertiary-font);
+	font-family: var(--secondary-font);
 }
 body {
 	font-family: var(--secondary-font);

@@ -35,6 +35,7 @@
 }
 .blog-post__text-wrapper {
 	margin-top: var(--margin);
+	color: var(--color-1-normal);
 }
 .blog-post__category {
 	font-size: var(--blog-category);
