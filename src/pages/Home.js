@@ -23,7 +23,7 @@ function Home() {
 				<h2>Featured</h2>
 				<h1>{feature[0] && feature[0].written_by}</h1>
 				<div
-					className="blog-post__feat-img"
+					className="crazy"
 					style={{
 						backgroundImage: `url(${
 							feature[0] &&
