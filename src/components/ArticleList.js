@@ -18,16 +18,18 @@ const ArticleList = function (props) {
 									backgroundImage: `url(${repo._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url})`,
 								}}
 							></div>
-							<h2 className="blog-post__category">
-								{repo._embedded["wp:term"][0][0].name}
-							</h2>
-							<h1
-								dangerouslySetInnerHTML={{
-									__html: `${repo.title.rendered}`,
-								}}
-							></h1>
-							<h3 className="blog-post__author">{repo.written_by}</h3>
-							<h4 className="blog_post__date">{repo.date}</h4>
+							<div className="blog-post__text-wrapper">
+								<h2 className="blog-post__category">
+									{repo._embedded["wp:term"][0][0].name}
+								</h2>
+								<h1
+									dangerouslySetInnerHTML={{
+										__html: `${repo.title.rendered}`,
+									}}
+								></h1>
+								<h3 className="blog-post__author">{repo.written_by}</h3>
+								<h4 className="blog_post__date">{repo.date}</h4>
+							</div>
 						</Link>
 					</li>
 				);
