@@ -1,15 +1,14 @@
 import React from "react";
+import ArticleListData from "../components/ArticleListData";
 import "../App.css";
 import "../styles/home.css";
-import ArticleListData from "../components/ArticleListData";
 
 function Home() {
 	return (
 		<div className="testy">
 			<h1>Home</h1>
-			<ArticleListData />
 			<section className="home-section">
-				<h2>First Section</h2>
+				<ArticleListData className="first-section" />
 			</section>
 			<section className="home-section">
 				<h2>Latest Articles</h2>

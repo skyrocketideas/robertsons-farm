@@ -6,7 +6,7 @@ const ArticleList = function (props) {
 
 	if (!repos || repos.length === 0) return <p>No repository, sorry.</p>;
 	return (
-		<ul>
+		<ul className="blog-list">
 			{repos.map(function (repo) {
 				return (
 					<li key={repo.id} className="blog-post">
