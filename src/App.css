@@ -1,13 +1,22 @@
 /* fonts import */
-@import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellota+Text:wght@300;400&family=Caveat&family=Donegal+One&display=swap");
 
 /* variables */
 :root {
 	font-size: 16px;
-	--primary-font: "Georgia", sans-serif;
-	--secondary-font: "Arial", sans-serif;
-	--tertiary-font: cursive;
+	--primary-font: "Bellota Text", cursive;
+	--secondary-font: "Donegal One", serif;
+	--tertiary-font: "Caveat", cursive;
 	--margin: 1rem;
+	--blog-category: 1rem;
+	--blog-title: 1.5rem;
+	--blog-author: 1rem;
+	--blog-date: 1rem;
+	--filter: grayscale(50%);
+	--base-color-1: 0;
+	--color-1-normal: hsla(var(--base-color-1), 0%, 0%, 100%);
+	--base-color-2: 46;
+	--color-2-normal: hsla(var(--base-color-2), 100%, 50%, 100%);
 }
 
 /* base styles */
@@ -36,11 +45,17 @@ a:hover {
 
 /* typography */
 h1 {
-	font-family: var(--primary-font);
+	font-family: var(--secondary-font);
 }
 h2 {
-	font-family: var(--tertiary-font);
+	font-family: var(--secondary-font);
+}
+h3 {
+	font-family: var(--secondary-font);
+}
+h4 {
+	font-family: var(--secondary-font);
 }
 body {
-	font-family: var(--secondary-font);
+	font-family: var(--primary-font);
 }

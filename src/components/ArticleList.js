@@ -23,12 +23,13 @@ const ArticleList = function (props) {
 									{repo._embedded["wp:term"][0][0].name}
 								</h2>
 								<h1
+									className="blog-post__title"
 									dangerouslySetInnerHTML={{
 										__html: `${repo.title.rendered}`,
 									}}
 								></h1>
 								<h3 className="blog-post__author">{repo.written_by}</h3>
-								<h4 className="blog_post__date">{repo.date}</h4>
+								<h4 className="blog-post__date">{repo.date}</h4>
 							</div>
 						</Link>
 					</li>

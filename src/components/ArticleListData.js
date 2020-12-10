@@ -20,7 +20,7 @@ function ArticleListData() {
 					return res.json();
 				})
 				.then((repos) => {
-					console.log("The data ...", repos);
+					// console.log("The data ...", repos);
 					setAppState({ loading: false, repos: repos });
 				});
 		},
