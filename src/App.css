@@ -12,6 +12,7 @@
 	--blog-title: 1.5rem;
 	--blog-author: 1rem;
 	--blog-date: 1rem;
+	--filter: grayscale(50%);
 	--base-color-1: 0;
 	--color-1-normal: hsla(var(--base-color-1), 0%, 0%, 100%);
 	--base-color-2: 46;
