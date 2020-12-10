@@ -26,7 +26,6 @@ function BlogItem({ match }) {
 	return (
 		<div>
 			<h1>Blog Item</h1>
-
 			<h2 className="blog-post__category">
 				{item._embedded && item._embedded["wp:term"][0][0].name}
 			</h2>
@@ -58,18 +57,3 @@ function BlogItem({ match }) {
 }
 
 export default BlogItem;
-
-// <article className="blog-post">
-// 	<div className="blog-post__feat-img"></div>
-// 	<div className="blog-post__text-wrapper">
-// 		<h2 className="blog-post__category">Category</h2>
-// 		<h1 className="blog-post__title">Title of blog-post</h1>
-// 		<p className="blog-post__excerpt">
-// 			Excerpt Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-// 			provident aut ullam dolorum sit impedit fugit similique rerum omnis, quod
-// 			dicta, voluptas eius animi quae reiciendis possimus voluptate molestias
-// 			dolore.
-// 		</p>
-// 		<Button />
-// 	</div>
-// </article>;
