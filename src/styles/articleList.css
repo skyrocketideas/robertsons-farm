@@ -18,14 +18,19 @@
 }
 
 /* single article */
-.blog-post:first-child {
-	background-color: yellow;
-}
 .blog-post {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
 	scroll-snap-align: center;
 	padding: 1rem;
 }
+.blog-post:first-child {
+	background-color: yellow;
+}
 .blog-post__feat-img {
+	grid-column: 1 / -1;
+	grid-row: 1 / 4;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top;
@@ -35,6 +40,9 @@
 	filter: var(--filter);
 }
 .blog-post__text-wrapper {
+	background-color: white;
+	grid-column: 2 / 8;
+	grid-row: 3 / 8;
 	margin-top: var(--margin);
 	color: var(--color-1-normal);
 }

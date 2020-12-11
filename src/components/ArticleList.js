@@ -10,26 +10,28 @@ const ArticleList = function (props) {
 		<ul className="blog-list">
 			{repos.map(function (repo) {
 				return (
-					<li key={repo.id} className="blog-post">
+					<li key={repo.id} className="blog-post-container">
 						<Link to={`/blog/${repo.id}`}>
-							<div
-								className="blog-post__feat-img"
-								style={{
-									backgroundImage: `url(${repo._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url})`,
-								}}
-							></div>
-							<div className="blog-post__text-wrapper">
-								<h2 className="blog-post__category">
-									{repo._embedded["wp:term"][0][0].name}
-								</h2>
-								<h1
-									className="blog-post__title"
-									dangerouslySetInnerHTML={{
-										__html: `${repo.title.rendered}`,
+							<div className="blog-post">
+								<div
+									className="blog-post__feat-img"
+									style={{
+										backgroundImage: `url(${repo._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url})`,
 									}}
-								></h1>
-								<h3 className="blog-post__author">{repo.written_by}</h3>
-								<h4 className="blog-post__date">{repo.date}</h4>
+								></div>
+								<div className="blog-post__text-wrapper">
+									<h2 className="blog-post__category">
+										{repo._embedded["wp:term"][0][0].name}
+									</h2>
+									<h1
+										className="blog-post__title"
+										dangerouslySetInnerHTML={{
+											__html: `${repo.title.rendered}`,
+										}}
+									></h1>
+									<h3 className="blog-post__author">{repo.written_by}</h3>
+									<h4 className="blog-post__date">{repo.date}</h4>
+								</div>
 							</div>
 						</Link>
 					</li>
