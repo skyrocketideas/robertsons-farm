@@ -18,6 +18,9 @@
 }
 
 /* single article */
+.blog-post-container:first-child {
+	background-color: yellow;
+}
 .blog-post {
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
@@ -25,9 +28,6 @@
 	scroll-snap-align: center;
 	height: 40vh;
 	padding: 1rem;
-}
-.blog-post-container:first-child {
-	background-color: yellow;
 }
 .blog-post__feat-img {
 	grid-column: 1 / -1;

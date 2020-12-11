@@ -25,7 +25,6 @@ function BlogItem({ match }) {
 
 	return (
 		<div>
-			<h1>Blog Item</h1>
 			<h2 className="blog-post__category">
 				{item._embedded && item._embedded["wp:term"][0][0].name}
 			</h2>
@@ -35,7 +34,7 @@ function BlogItem({ match }) {
 				dangerouslySetInnerHTML={{ __html: `${item.excerpt.rendered}` }}
 			></p>
 			<h3 className="blog-post__author">{item.written_by}</h3>
-			<h4 className="blog_post__date">{item.date}</h4>
+			<h4 className="blog-post__date">{item.date}</h4>
 			<div
 				className="blog-post__feat-img"
 				style={{
