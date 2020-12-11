@@ -14,7 +14,7 @@ function ArticleListData() {
 		function () {
 			setAppState({ loading: true });
 			const apiUrl =
-				"https://lovethatwillnotdie.com/wp_robertsons/wp-json/wp/v2/posts/?_embed&per_page=100";
+				"https://lovethatwillnotdie.com/wp_robertsons/wp-json/wp/v2/posts/?_embed&sticky=false&per_page=100";
 			fetch(apiUrl)
 				.then((res) => {
 					return res.json();
