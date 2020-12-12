@@ -1,5 +1,6 @@
 import Axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
 import "../styles/shop.css";
 
@@ -21,19 +22,21 @@ function ShopList() {
 		<ul style={{ listStyle: "none" }} className="shop-list">
 			{data.entry.map((item) => (
 				<li key={item.id.$t} className="shop-item-container">
-					<div className="shop-item">
-						<div
-							className="shop-item__feat-img"
-							style={{
-								backgroundImage: `url(${item.gsx$productimage.$t})`,
-							}}
-						></div>
-						<h2 className="shop-item__category">
-							{item.gsx$productcategory.$t}
-						</h2>
-						<h1 className="shop-item__title">{item.gsx$productname.$t}</h1>
-						<h3 className="shop-item__price">{item.gsx$productprice.$t}</h3>
-					</div>
+					<Link to={`/shop/${item.id.$t}`}>
+						<div className="shop-item">
+							<div
+								className="shop-item__feat-img"
+								style={{
+									backgroundImage: `url(${item.gsx$productimage.$t})`,
+								}}
+							></div>
+							<h2 className="shop-item__category">
+								{item.gsx$productcategory.$t}
+							</h2>
+							<h1 className="shop-item__title">{item.gsx$productname.$t}</h1>
+							<h3 className="shop-item__price">{item.gsx$productprice.$t}</h3>
+						</div>
+					</Link>
 				</li>
 			))}
 		</ul>
