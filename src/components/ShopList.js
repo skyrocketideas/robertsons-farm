@@ -16,7 +16,7 @@ function ShopList() {
 			// console.log("test", result.data.feed.entry);
 		};
 		fetchData();
-	});
+	}, []);
 
 	return (
 		<ul style={{ listStyle: "none" }} className="shop-list">

@@ -1,12 +1,14 @@
 import Axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "../App.css";
 
-function ShopItem({ match }) {
+function ShopItem() {
 	// fetch data from database
-
-	const endpoint = `https://spreadsheets.google.com/feeds/list/1yQzFL0SsMvM4fJhzGdkq6B7jzre9KbAkMxu864SNexo/1/public/full/cre1l`;
-	const [data, setData] = useState({});
+	let location = useLocation();
+	console.log("hi!!!!!", location.pathname);
+	const endpoint = `${location}?alt=json`;
+	const [data, setData] = useState();
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -15,16 +17,16 @@ function ShopItem({ match }) {
 			console.log("test", result);
 		};
 		fetchData();
-	}, []);
+	});
 	return (
 		<div>
 			<h1>Shop Item</h1>
-			<h2>{data.status}</h2>
+			<h2>{data}</h2>
 		</div>
 	);
 }
 
 export default ShopItem;
 
-// http://localhost:3000/shop/https://spreadsheets.google.com/feeds/list/1yQzFL0SsMvM4fJhzGdkq6B7jzre9KbAkMxu864SNexo/1/public/full/cre1l
-// http://localhost:3000/shop/https://spreadsheets.google.com/feeds/list/1yQzFL0SsMvM4fJhzGdkq6B7jzre9KbAkMxu864SNexo/1/public/full/chk2m
+// https://spreadsheets.google.com/feeds/list/1yQzFL0SsMvM4fJhzGdkq6B7jzre9KbAkMxu864SNexo/1/public/full/cre1l
+// https://spreadsheets.google.com/feeds/list/1yQzFL0SsMvM4fJhzGdkq6B7jzre9KbAkMxu864SNexo/1/public/full/chk2m
