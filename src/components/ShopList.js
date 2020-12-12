@@ -25,6 +25,7 @@ function ShopList() {
 						<li key={item.id.$t}>
 							<h1>{item.gsx$productname.$t}</h1>
 							<h2>{item.gsx$productprice.$t}</h2>
+							<img src={item.gsx$productimage.$t} alt="" />
 						</li>
 					))}
 				</ul>
