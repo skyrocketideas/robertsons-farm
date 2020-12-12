@@ -15,7 +15,7 @@ function ShopList() {
 			// console.log("test", result.data.feed.entry);
 		};
 		fetchData();
-	}, []);
+	});
 
 	return (
 		<div className="App">
