@@ -12,7 +12,7 @@ function ShopList() {
 		const fetchData = async () => {
 			const result = await Axios(endpoint);
 			setData(result.data.feed);
-			console.log("test", result.data.feed.entry);
+			// console.log("test", result.data.feed.entry);
 		};
 		fetchData();
 	}, []);
