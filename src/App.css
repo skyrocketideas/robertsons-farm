@@ -59,3 +59,17 @@ h4 {
 body {
 	font-family: var(--primary-font);
 }
+
+/* shop page */
+.shop-list {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	background-color: pink;
+}
+.shop-item {
+	padding: 1rem;
+}
+
+.shop-item__feat-img {
+	width: 100%;
+}
