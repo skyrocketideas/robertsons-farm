@@ -1,4 +1,4 @@
-/* API query for feature sticky post */
+// API query for feature sticky post
 const GetFeaturedArticle = async () => {
 	const featuredArticle = await fetch(
 		"https://lovethatwillnotdie.com/wp_robertsons/wp-json/wp/v2/posts/?_embed&sticky=true"
@@ -7,7 +7,7 @@ const GetFeaturedArticle = async () => {
 	return response;
 };
 
-/* API query for shop items */
+// API query for shop items
 const GetShopItems = async () => {
 	const shopItems = await fetch(
 		"https://spreadsheets.google.com/feeds/cells/1yQzFL0SsMvM4fJhzGdkq6B7jzre9KbAkMxu864SNexo/1/public/full?alt=json"
@@ -15,6 +15,10 @@ const GetShopItems = async () => {
 	const response = await shopItems.json();
 	return response;
 };
+
+// API for shop items
+const spreadsheetID = "1yQzFL0SsMvM4fJhzGdkq6B7jzre9KbAkMxu864SNexo";
+const endpoint = `https://spreadsheets.google.com/feeds/list/${spreadsheetID}/1/public/full?alt=json`;
 
 const Database = { GetFeaturedArticle, GetShopItems };
 
