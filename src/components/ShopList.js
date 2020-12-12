@@ -1,6 +1,7 @@
 import Axios from "axios";
 import { useState, useEffect } from "react";
 import "../App.css";
+import "../styles/shop.css";
 
 function ShopList() {
 	// fetch data from database
@@ -21,13 +22,14 @@ function ShopList() {
 			{data.entry.map((item) => (
 				<li key={item.id.$t} className="shop-item-container">
 					<div className="shop-item">
+						<div
+							className="shop-item__feat-img"
+							style={{
+								backgroundImage: `url(${item.gsx$productimage.$t})`,
+							}}
+						></div>
 						<h1 className="shop-item__title">{item.gsx$productname.$t}</h1>
 						<h2 className="shop-item__price">{item.gsx$productprice.$t}</h2>
-						<img
-							src={item.gsx$productimage.$t}
-							alt=""
-							className="shop-item__feat-img"
-						/>
 						<h3 className="shop-item__category">
 							{item.gsx$productcategory.$t}
 						</h3>
