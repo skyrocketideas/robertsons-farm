@@ -28,11 +28,11 @@ function ShopList() {
 								backgroundImage: `url(${item.gsx$productimage.$t})`,
 							}}
 						></div>
-						<h1 className="shop-item__title">{item.gsx$productname.$t}</h1>
-						<h2 className="shop-item__price">{item.gsx$productprice.$t}</h2>
-						<h3 className="shop-item__category">
+						<h2 className="shop-item__category">
 							{item.gsx$productcategory.$t}
-						</h3>
+						</h2>
+						<h1 className="shop-item__title">{item.gsx$productname.$t}</h1>
+						<h3 className="shop-item__price">{item.gsx$productprice.$t}</h3>
 					</div>
 				</li>
 			))}
