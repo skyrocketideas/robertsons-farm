@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ArticleListData from "../components/ArticleListData";
-import ShopListData from "../components/ShopListData";
+import ShopList from "../components/ShopList";
 import Database from "../modules/Database";
 import "../App.css";
 import "../styles/home.css";
@@ -43,7 +43,7 @@ function Home() {
 			</section>
 			<section className="home-section">
 				<h2>Shop</h2>
-				{/* <ShopListData /> */}
+				<ShopList />
 			</section>
 			<section className="home-section">
 				<h2>Latest Products</h2>

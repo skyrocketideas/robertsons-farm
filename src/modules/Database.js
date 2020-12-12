@@ -1,3 +1,6 @@
+import Axios from "axios";
+import { useEffect, useState } from "react";
+
 // API query for feature sticky post
 const GetFeaturedArticle = async () => {
 	const featuredArticle = await fetch(
@@ -8,18 +11,11 @@ const GetFeaturedArticle = async () => {
 };
 
 // API query for shop items
-const GetShopItems = async () => {
-	const shopItems = await fetch(
-		"https://spreadsheets.google.com/feeds/cells/1yQzFL0SsMvM4fJhzGdkq6B7jzre9KbAkMxu864SNexo/1/public/full?alt=json"
-	);
-	const response = await shopItems.json();
-	return response;
-};
+// const GetShopItems = async () => {
+// 	const shopItems = await Axios(endpoint);
+// 	return shopItems;
+// };
 
-// API for shop items
-const spreadsheetID = "1yQzFL0SsMvM4fJhzGdkq6B7jzre9KbAkMxu864SNexo";
-const endpoint = `https://spreadsheets.google.com/feeds/list/${spreadsheetID}/1/public/full?alt=json`;
-
-const Database = { GetFeaturedArticle, GetShopItems };
+const Database = { GetFeaturedArticle };
 
 export default Database;
