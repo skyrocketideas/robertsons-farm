@@ -5,23 +5,23 @@ import "../App.css";
 
 function ShopItem() {
 	// fetch data from database
-	let location = useLocation();
-	console.log("hi!!!!!", location.pathname);
-	const endpoint = `${location}?alt=json`;
-	const [data, setData] = useState();
+	const spreadsheetID = "1yQzFL0SsMvM4fJhzGdkq6B7jzre9KbAkMxu864SNexo";
+	const endpoint = `https://spreadsheets.google.com/feeds/list/1yQzFL0SsMvM4fJhzGdkq6B7jzre9KbAkMxu864SNexo/1/public/full/chk2m?alt=json`;
+	const [item, setItem] = useState();
 
 	useEffect(() => {
 		const fetchData = async () => {
 			const result = await Axios(endpoint);
-			setData(result);
-			console.log("test", result);
+			setItem(result.data.entry.json);
+			console.log("test", item);
 		};
 		fetchData();
-	});
+	}, []);
+
 	return (
 		<div>
 			<h1>Shop Item</h1>
-			<h2>{data}</h2>
+			{/* <h2>{item.gsx$productprice.$t}</h2> */}
 		</div>
 	);
 }

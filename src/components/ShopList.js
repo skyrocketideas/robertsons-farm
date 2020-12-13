@@ -8,6 +8,8 @@ function ShopList() {
 	// fetch data from database
 	const spreadsheetID = "1yQzFL0SsMvM4fJhzGdkq6B7jzre9KbAkMxu864SNexo";
 	const endpoint = `https://spreadsheets.google.com/feeds/list/${spreadsheetID}/1/public/full?alt=json`;
+	const str = "hello12345";
+	const strslice = str.slice(str.length - 5);
 	const [data, setData] = useState({ entry: [] });
 	useEffect(() => {
 		const fetchData = async () => {
@@ -21,8 +23,9 @@ function ShopList() {
 	return (
 		<ul style={{ listStyle: "none" }} className="shop-list">
 			{data.entry.map((item) => (
-				<li key={item.id.$t} className="shop-item-container">
-					<Link to={`/shop/${item.id.$t}`}>
+				<li key={item.id} className="shop-item-container">
+					{console.log("the item id is ...", item.id.$t)}
+					<Link to={`/shop/${item.id}`}>
 						<div className="shop-item">
 							<div
 								className="shop-item__feat-img"
