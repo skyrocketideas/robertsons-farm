@@ -1,6 +1,3 @@
-import Axios from "axios";
-import { useEffect, useState } from "react";
-
 // API query for feature sticky post
 const GetFeaturedArticle = async () => {
 	const featuredArticle = await fetch(

@@ -1,41 +1,51 @@
 import Axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
-import "../styles/articleList.css";
+import "../styles/shop.css";
 
 function ShopList() {
 	// fetch data from database
-	const spreadsheetID = "1yQzFL0SsMvM4fJhzGdkq6B7jzre9KbAkMxu864SNexo";
-	const endpoint = `https://spreadsheets.google.com/feeds/list/${spreadsheetID}/1/public/full?alt=json`;
-	const [data, setData] = useState({ entry: [] });
+	const endpointRestDB = "https://robertsons-ac10.restdb.io/rest/shop-items";
+	const apiKey = "5fd5f88eff9d670638140517";
+	const [shopData, setShopData] = useState({ data: [] });
 	useEffect(() => {
 		const fetchData = async () => {
-			const result = await Axios(endpoint);
-			setData(result.data.feed);
-			// console.log("test", result.data.feed.entry);
+			const result = await Axios(endpointRestDB, {
+				method: "get",
+				headers: {
+					"Content-Type": "application/json; charset=utf-8",
+					"x-apikey": apiKey,
+					"cache-control": "no-cache",
+				},
+			});
+			setShopData(result);
+			console.log("Is this the data? ... ", result);
 		};
 		fetchData();
 	}, []);
 
 	return (
-		<div className="App">
-			<header className="App-header">
-				<ul style={{ listStyle: "none" }}>
-					{data.entry.map((item) => (
-						<li key={item.id.$t}>
-							<h1>{item.gsx$productname.$t}</h1>
-							<h2>{item.gsx$productprice.$t}</h2>
-							<img
-								src={item.gsx$productimage.$t}
-								style={{ width: "200px", height: "auto" }}
-								alt=""
-							/>
-							<h3>{item.gsx$productcategory.$t}</h3>
-						</li>
-					))}
-				</ul>
-			</header>
-		</div>
+		<ul style={{ listStyle: "none" }} className="shop-list">
+			{shopData.data.map((item) => (
+				<li key={item._id} className="shop-item-container">
+					<Link to={`/shop/${item._id}`}>
+						{console.log("ITEM ddd", item._id)}
+						<div className="shop-item">
+							<div
+								className="shop-item__feat-img"
+								style={{
+									backgroundImage: `url(${item.ProductImage})`,
+								}}
+							></div>
+							<h2 className="shop-item__category">{item.ProductCategory}</h2>
+							<h1 className="shop-item__title">{item.ProductName}</h1>
+							<h3 className="shop-item__price">{item.ProductPrice}</h3>
+						</div>
+					</Link>
+				</li>
+			))}
+		</ul>
 	);
 }
 

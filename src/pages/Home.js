@@ -15,7 +15,7 @@ function Home() {
 			setFeature(Data);
 			// console.log("featured article", Data);
 		};
-		getData(feature);
+		getData();
 		return;
 	}, []);
 

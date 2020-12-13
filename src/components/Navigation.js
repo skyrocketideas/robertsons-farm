@@ -50,6 +50,15 @@ function Navigation() {
 						>
 							Blog
 						</Nav.Link>
+						<Nav.Link
+							eventKey="5"
+							as={Link}
+							className="navbar__link"
+							activeClassName="navbar__link--active"
+							to="/shop"
+						>
+							Shop
+						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
