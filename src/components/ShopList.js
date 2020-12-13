@@ -6,38 +6,41 @@ import "../styles/shop.css";
 
 function ShopList() {
 	// fetch data from database
-	const spreadsheetID = "1yQzFL0SsMvM4fJhzGdkq6B7jzre9KbAkMxu864SNexo";
-	const endpoint = `https://spreadsheets.google.com/feeds/list/${spreadsheetID}/1/public/full?alt=json`;
-	const str = "hello12345";
-	const strslice = str.slice(str.length - 5);
-	const [data, setData] = useState({ entry: [] });
+	const endpointRestDB = "https://robertsons-ac10.restdb.io/rest/shop-items";
+	const apiKey = "5fd5f88eff9d670638140517";
+	const [shopData, setShopData] = useState({ data: [] });
 	useEffect(() => {
 		const fetchData = async () => {
-			const result = await Axios(endpoint);
-			setData(result.data.feed);
-			// console.log("test", result.data.feed.entry);
+			const result = await Axios(endpointRestDB, {
+				method: "get",
+				headers: {
+					"Content-Type": "application/json; charset=utf-8",
+					"x-apikey": apiKey,
+					"cache-control": "no-cache",
+				},
+			});
+			setShopData(result);
+			console.log("Is this the data? ... ", result);
 		};
 		fetchData();
 	}, []);
 
 	return (
 		<ul style={{ listStyle: "none" }} className="shop-list">
-			{data.entry.map((item) => (
-				<li key={item.id} className="shop-item-container">
-					{console.log("the item id is ...", item.id.$t)}
-					<Link to={`/shop/${item.id}`}>
+			{shopData.data.map((item) => (
+				<li key={item._id} className="shop-item-container">
+					<Link to={`/shop/${item._id}`}>
+						{console.log("ITEM ddd", item._id)}
 						<div className="shop-item">
 							<div
 								className="shop-item__feat-img"
 								style={{
-									backgroundImage: `url(${item.gsx$productimage.$t})`,
+									backgroundImage: `url(${item.ProductImage})`,
 								}}
 							></div>
-							<h2 className="shop-item__category">
-								{item.gsx$productcategory.$t}
-							</h2>
-							<h1 className="shop-item__title">{item.gsx$productname.$t}</h1>
-							<h3 className="shop-item__price">{item.gsx$productprice.$t}</h3>
+							<h2 className="shop-item__category">{item.ProductCategory}</h2>
+							<h1 className="shop-item__title">{item.ProductName}</h1>
+							<h3 className="shop-item__price">{item.ProductPrice}</h3>
 						</div>
 					</Link>
 				</li>

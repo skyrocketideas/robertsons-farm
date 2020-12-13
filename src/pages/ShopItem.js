@@ -1,32 +1,44 @@
-import Axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 import "../App.css";
 
-function ShopItem() {
+function ShopItem({ match }) {
 	// fetch data from database
-	const spreadsheetID = "1yQzFL0SsMvM4fJhzGdkq6B7jzre9KbAkMxu864SNexo";
-	const endpoint = `https://spreadsheets.google.com/feeds/list/1yQzFL0SsMvM4fJhzGdkq6B7jzre9KbAkMxu864SNexo/1/public/full/chk2m?alt=json`;
-	const [item, setItem] = useState();
+	const endpointRestDB = `https://robertsons-ac10.restdb.io/rest/shop-items/${match.params.id}`;
+	const apiKey = "5fd5f88eff9d670638140517";
 
-	useEffect(() => {
-		const fetchData = async () => {
-			const result = await Axios(endpoint);
-			setItem(result.data.entry.json);
-			console.log("test", item);
-		};
-		fetchData();
+	useEffect(function () {
+		fetchItem();
+		// eslint-disable-next-line
 	}, []);
+
+	const [item, setItem] = useState({});
+
+	const fetchItem = async function () {
+		const fetchItem = await fetch(endpointRestDB, {
+			method: "get",
+			headers: {
+				"Content-Type": "application/json; charset=utf-8",
+				"x-apikey": apiKey,
+				"cache-control": "no-cache",
+			},
+		});
+		const item = await fetchItem.json();
+		setItem(item);
+	};
 
 	return (
 		<div>
 			<h1>Shop Item</h1>
-			{/* <h2>{item.gsx$productprice.$t}</h2> */}
+			<h2>{item.ProductName}</h2>
+			<h2>{item.ProductCategory}</h2>
+			<div
+				className="blog-post__feat-img"
+				style={{
+					backgroundImage: `url(${item.ProductImage})`,
+				}}
+			></div>
 		</div>
 	);
 }
 
 export default ShopItem;
-
-// https://spreadsheets.google.com/feeds/list/1yQzFL0SsMvM4fJhzGdkq6B7jzre9KbAkMxu864SNexo/1/public/full/cre1l
-// https://spreadsheets.google.com/feeds/list/1yQzFL0SsMvM4fJhzGdkq6B7jzre9KbAkMxu864SNexo/1/public/full/chk2m
