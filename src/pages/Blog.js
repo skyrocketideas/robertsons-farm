@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../components/Button";
 import ArticleListData from "../components/ArticleListData";
 import "../App.css";
 
