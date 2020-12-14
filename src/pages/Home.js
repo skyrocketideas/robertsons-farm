@@ -26,7 +26,7 @@ function Home() {
 				<h2>Featured</h2>
 				<Link to={`/blog/${feature[0] && feature[0].id}`}>
 					<div
-						className="crazy"
+						className="blog-post__feat-img"
 						style={{
 							backgroundImage: `url(${
 								feature[0] &&
