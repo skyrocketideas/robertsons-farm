@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ArticleListData from "../components/ArticleListData";
 import ShopList from "../components/ShopList";
 import Database from "../modules/Database";
+import { Button } from "../components/Button";
 import "../App.css";
 import "../styles/home.css";
 
@@ -49,6 +50,9 @@ function Home() {
 							__html: `${feature[0] && feature[0].excerpt.rendered}`,
 						}}
 					></p>
+					<Button type="button" buttonStyle="btn__primary--solid">
+						Its A Button
+					</Button>
 				</Link>
 			</section>
 			<section className="home-section articles-section">

@@ -1,5 +1,10 @@
-button {
+.btn {
 	width: 100%;
 	height: auto;
 	padding: 1rem;
+	text-transform: uppercase;
+}
+
+.btn__primary--solid {
+	background-color: var(--color-2-normal);
 }
