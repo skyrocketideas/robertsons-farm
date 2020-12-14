@@ -35,7 +35,6 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-image: url("../assets/img-test.jpg");
 	width: 100%;
 	height: auto;
 	filter: var(--filter);
