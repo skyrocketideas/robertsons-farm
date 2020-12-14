@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ArticleListData from "../components/ArticleListData";
 import ShopList from "../components/ShopList";
 import Database from "../modules/Database";
+import { Button } from "../components/Button";
 import "../App.css";
 import "../styles/home.css";
 
@@ -24,9 +25,8 @@ function Home() {
 			<section className="home-section feature-section">
 				<h2>Featured</h2>
 				<Link to={`/blog/${feature[0] && feature[0].id}`}>
-					<h1>{feature[0] && feature[0].written_by}</h1>
 					<div
-						className="crazy"
+						className="blog-post__feat-img"
 						style={{
 							backgroundImage: `url(${
 								feature[0] &&
@@ -35,6 +35,24 @@ function Home() {
 							})`,
 						}}
 					></div>
+					<h2 className="blog-post__category">
+						{feature[0] && feature[0]._embedded["wp:term"][0][0].name}
+					</h2>
+					<h1
+						className="blog-post__title"
+						dangerouslySetInnerHTML={{
+							__html: `${feature[0] && feature[0].title.rendered}`,
+						}}
+					></h1>
+					<p
+						className="blog-post__excerpt"
+						dangerouslySetInnerHTML={{
+							__html: `${feature[0] && feature[0].excerpt.rendered}`,
+						}}
+					></p>
+					<Button type="button" buttonStyle="btn__secondary--outline">
+						Read more
+					</Button>
 				</Link>
 			</section>
 			<section className="home-section articles-section">

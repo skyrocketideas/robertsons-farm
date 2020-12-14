@@ -4,6 +4,7 @@ import "../App.css";
 function ShopItem({ match }) {
 	// fetch data from database
 	const endpointRestDB = `https://robertsons-ac10.restdb.io/rest/shop-items/${match.params.id}`;
+	const imgEndpoint = `https://robertsons-ac10.restdb.io/media/shop-items/${match.params.id}`;
 	const apiKey = "5fd5f88eff9d670638140517";
 
 	useEffect(function () {
@@ -37,6 +38,7 @@ function ShopItem({ match }) {
 					backgroundImage: `url(${item.ProductImage})`,
 				}}
 			></div>
+			{/* <img src={dbImage} alt="" /> */}
 		</div>
 	);
 }

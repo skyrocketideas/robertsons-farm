@@ -19,7 +19,7 @@
 
 /* single article */
 .blog-post-container:first-child {
-	background-color: yellow;
+	background-color: var(--color-2-normal);
 }
 .blog-post {
 	display: grid;
@@ -37,7 +37,7 @@
 	background-position: top;
 	background-image: url("../assets/img-test.jpg");
 	width: 100%;
-	height: 50vh;
+	height: auto;
 	filter: var(--filter);
 }
 .blog-post__text-wrapper {
