@@ -8,3 +8,9 @@
 .btn__primary--solid {
 	background-color: var(--color-2-normal);
 }
+
+.btn__secondary--outline {
+	background-color: transparent;
+	border: 2px solid var(--color-1-normal);
+	color: var(--color-1-normal);
+}

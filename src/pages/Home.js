@@ -50,8 +50,8 @@ function Home() {
 							__html: `${feature[0] && feature[0].excerpt.rendered}`,
 						}}
 					></p>
-					<Button type="button" buttonStyle="btn__primary--solid">
-						Its A Button
+					<Button type="button" buttonStyle="btn__secondary--outline">
+						Read more
 					</Button>
 				</Link>
 			</section>
