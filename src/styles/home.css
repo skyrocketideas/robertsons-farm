@@ -1,6 +1,9 @@
-/* .crazy {
+.feature-section__feat-img {
 	background-size: cover;
+	background-repeat: no-repeat;
 	background-position: center;
+	background-image: url("../assets/img-test.jpg");
 	width: 100%;
-	height: 30vh;
-} */
+	height: 40vh;
+	filter: var(--filter);
+}
