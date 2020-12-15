@@ -15,6 +15,7 @@
 	--filter: grayscale(50%);
 	--base-color-1: 0;
 	--color-1-normal: hsla(var(--base-color-1), 0%, 0%, 100%);
+	--color-1-light: hsla(var(--base-color-2), 0%, 90%, 100%);
 	--base-color-2: 46;
 	--color-2-normal: hsla(var(--base-color-2), 100%, 50%, 100%);
 }
