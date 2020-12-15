@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ArticleListData from "../components/ArticleListData";
 import ShopList from "../components/ShopList";
+import MailingList from "../components/MailingList";
 import Database from "../modules/Database";
 import { Button } from "../components/Button";
 import "../App.css";
@@ -68,6 +69,7 @@ function Home() {
 			</section>
 			<section className="home-section">
 				<h2>Mailing List</h2>
+				<MailingList />
 			</section>
 		</div>
 	);
