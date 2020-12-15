@@ -6,13 +6,13 @@ import "../styles/footer.css";
 function Footer() {
 	return (
 		<div className="footer-container">
-			<section className="footer-section__site-links">
+			<section className="footer-section footer-section__site-links">
 				<Link to="/shop">Shop</Link>
 				<Link to="/blog">Blog</Link>
 				<Link to="/about">Our story</Link>
 				<Link to="/contact">Contact</Link>
 			</section>
-			<section className="footer-section__social-links">
+			<section className="footer-section footer-section__social-links">
 				<a href="https://www.facebook.com/robertsonsfarmandapothecary">
 					Facebook
 				</a>
@@ -20,7 +20,7 @@ function Footer() {
 					Instagram
 				</a>
 			</section>
-			<section className="footer-section__address">
+			<section className="footer-section footer-section__address">
 				<address>
 					<div>Robertson's Farm & Apothecary</div>
 					<div>754 Canaan Mountain Road</div>
@@ -30,7 +30,7 @@ function Footer() {
 					<div>Canada</div>
 				</address>
 			</section>
-			<section className="footer-section__copyright">
+			<section className="footer-section footer-section__copyright">
 				<p>© Robertson's Farm 2020. All rights reserved</p>
 			</section>
 		</div>
