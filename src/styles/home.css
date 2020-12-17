@@ -1,3 +1,6 @@
+.home-section:not(.mailing-list) {
+	margin: 2rem 0;
+}
 .home-section > h2 {
 	padding: 0 1rem;
 }

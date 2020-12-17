@@ -76,7 +76,7 @@ function Home() {
 					<h2>Latest Products</h2>
 				</section>
 			</ScrollAnimation>
-			<section className="home-section">
+			<section className="home-section mailing-list">
 				<MailingList />
 			</section>
 		</div>
