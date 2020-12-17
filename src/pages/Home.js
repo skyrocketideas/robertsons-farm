@@ -36,24 +36,26 @@ function Home() {
 							})`,
 						}}
 					></div>
-					<h2 className="blog-post__category">
-						{feature[0] && feature[0]._embedded["wp:term"][0][0].name}
-					</h2>
-					<h1
-						className="blog-post__title"
-						dangerouslySetInnerHTML={{
-							__html: `${feature[0] && feature[0].title.rendered}`,
-						}}
-					></h1>
-					<p
-						className="blog-post__excerpt"
-						dangerouslySetInnerHTML={{
-							__html: `${feature[0] && feature[0].excerpt.rendered}`,
-						}}
-					></p>
-					<Button type="button" buttonStyle="btn__secondary--outline">
-						Read more
-					</Button>
+					<div className="blog-post__text-wrapper">
+						<h2 className="blog-post__category">
+							{feature[0] && feature[0]._embedded["wp:term"][0][0].name}
+						</h2>
+						<h1
+							className="blog-post__title"
+							dangerouslySetInnerHTML={{
+								__html: `${feature[0] && feature[0].title.rendered}`,
+							}}
+						></h1>
+						<p
+							className="blog-post__excerpt"
+							dangerouslySetInnerHTML={{
+								__html: `${feature[0] && feature[0].excerpt.rendered}`,
+							}}
+						></p>
+						<Button type="button" buttonStyle="btn__secondary--outline">
+							Read more
+						</Button>
+					</div>
 				</Link>
 			</section>
 			<section className="home-section articles-section">
