@@ -5,6 +5,7 @@ import ShopList from "../components/ShopList";
 import MailingList from "../components/MailingList";
 import Database from "../modules/Database";
 import { Button } from "../components/Button";
+import ScrollAnimation from "react-animate-on-scroll";
 import "../App.css";
 import "../styles/home.css";
 
@@ -58,20 +59,28 @@ function Home() {
 					</div>
 				</Link>
 			</section>
-			<section className="home-section articles-section">
-				<h2>Latest Articles</h2>
-				<ArticleListData />
-			</section>
-			<section className="home-section">
-				<h2>Shop</h2>
-				<ShopList />
-			</section>
-			<section className="home-section">
-				<h2>Latest Products</h2>
-			</section>
-			<section className="home-section">
-				<MailingList />
-			</section>
+			<ScrollAnimation animateIn="fadeUp">
+				<section className="home-section articles-section">
+					<h2>Latest Articles</h2>
+					<ArticleListData />
+				</section>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeUp">
+				<section className="home-section">
+					<h2>Shop</h2>
+					<ShopList />
+				</section>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeUp">
+				<section className="home-section">
+					<h2>Latest Products</h2>
+				</section>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeUp">
+				<section className="home-section">
+					<MailingList />
+				</section>
+			</ScrollAnimation>
 		</div>
 	);
 }

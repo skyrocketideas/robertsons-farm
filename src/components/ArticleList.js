@@ -13,29 +13,27 @@ const ArticleList = function (props) {
 				return (
 					<li key={repo.id} className="blog-post-container">
 						<Link to={`/blog/${repo.id}`}>
-							<ScrollAnimation animateIn="fadeUp">
-								<div className="blog-post">
-									<div
-										className="blog-post__feat-img"
-										style={{
-											backgroundImage: `url(${repo._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url})`,
+							<div className="blog-post">
+								<div
+									className="blog-post__feat-img"
+									style={{
+										backgroundImage: `url(${repo._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url})`,
+									}}
+								></div>
+								<div className="blog-post__text-wrapper">
+									<h2 className="blog-post__category">
+										{repo._embedded["wp:term"][0][0].name}
+									</h2>
+									<h1
+										className="blog-post__title"
+										dangerouslySetInnerHTML={{
+											__html: `${repo.title.rendered}`,
 										}}
-									></div>
-									<div className="blog-post__text-wrapper">
-										<h2 className="blog-post__category">
-											{repo._embedded["wp:term"][0][0].name}
-										</h2>
-										<h1
-											className="blog-post__title"
-											dangerouslySetInnerHTML={{
-												__html: `${repo.title.rendered}`,
-											}}
-										></h1>
-										<h3 className="blog-post__author">{repo.written_by}</h3>
-										<h4 className="blog-post__date">{repo.date}</h4>
-									</div>
+									></h1>
+									<h3 className="blog-post__author">{repo.written_by}</h3>
+									<h4 className="blog-post__date">{repo.date}</h4>
 								</div>
-							</ScrollAnimation>
+							</div>
 						</Link>
 					</li>
 				);

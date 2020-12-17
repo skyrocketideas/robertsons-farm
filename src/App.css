@@ -46,6 +46,22 @@ a:hover {
 	overflow-x: hidden;
 }
 
+/* animation */
+.fadeUp {
+	animation: animFadeUp;
+}
+
+@keyframes animFadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
 /* typography */
 h1 {
 	font-family: var(--secondary-font);
