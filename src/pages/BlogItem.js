@@ -24,6 +24,13 @@ function BlogItem({ match }) {
 		setItem(item);
 	};
 
+	// convert date to human readable
+	const dateString = item.date;
+	const formatDate = (dateString) => {
+		const options = { year: "numeric", month: "long", day: "numeric" };
+		return new Date(dateString).toLocaleDateString(undefined, options);
+	};
+
 	return (
 		<article className="blog-post-item">
 			<h2 className="blog-post-item__category">
@@ -35,7 +42,7 @@ function BlogItem({ match }) {
 				dangerouslySetInnerHTML={{ __html: `${item.excerpt.rendered}` }}
 			></p>
 			<h3 className="blog-post-item__author">{item.written_by}</h3>
-			<h4 className="blog-post-item__date">{item.date}</h4>
+			<h4 className="blog-post-item__date">{formatDate(dateString)}</h4>
 			<div
 				className="blog-post-item__feat-img"
 				style={{
