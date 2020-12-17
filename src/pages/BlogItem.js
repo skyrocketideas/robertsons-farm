@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
+import "../styles/blogItem.css";
 
 function BlogItem({ match }) {
 	useEffect(function () {
@@ -24,19 +25,19 @@ function BlogItem({ match }) {
 	};
 
 	return (
-		<div>
-			<h2 className="blog-post__category">
+		<article className="blog-post-item">
+			<h2 className="blog-post-item__category">
 				{item._embedded && item._embedded["wp:term"][0][0].name}
 			</h2>
-			<h1 className="blog-post__title">{item.title.rendered}</h1>
+			<h1 className="blog-post-item__title">{item.title.rendered}</h1>
 			<p
-				className="blog-post__excerpt"
+				className="blog-post-item__excerpt"
 				dangerouslySetInnerHTML={{ __html: `${item.excerpt.rendered}` }}
 			></p>
-			<h3 className="blog-post__author">{item.written_by}</h3>
-			<h4 className="blog-post__date">{item.date}</h4>
+			<h3 className="blog-post-item__author">{item.written_by}</h3>
+			<h4 className="blog-post-item__date">{item.date}</h4>
 			<div
-				className="blog-post__feat-img"
+				className="blog-post-item__feat-img"
 				style={{
 					backgroundImage: `url(${
 						item._embedded &&
@@ -46,12 +47,12 @@ function BlogItem({ match }) {
 				}}
 			></div>
 			<div
-				className="blog-post__content"
+				className="blog-post-item__content"
 				dangerouslySetInnerHTML={{
 					__html: `${item.content.rendered}`,
 				}}
 			></div>
-		</div>
+		</article>
 	);
 }
 
