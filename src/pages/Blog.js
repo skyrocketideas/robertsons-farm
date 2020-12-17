@@ -1,5 +1,6 @@
 import React from "react";
 import ArticleListData from "../components/ArticleListData";
+
 import "../App.css";
 
 function Blog() {

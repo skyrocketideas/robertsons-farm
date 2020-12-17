@@ -1,0 +1,11 @@
+.blog-post-item__feat-img {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 40vh;
+	width: 100%;
+}
+/* target all items except feat-img */
+.blog-post-item > *:not(.blog-post-item__feat-img) {
+	padding: 0 1rem;
+}

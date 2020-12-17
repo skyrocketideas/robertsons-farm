@@ -8,7 +8,8 @@
 	--secondary-font: "Donegal One", serif;
 	--tertiary-font: "Caveat", cursive;
 	--margin: 1rem;
-	--blog-category: 1rem;
+	--padding: 1rem;
+	--blog-category: 1.5rem;
 	--blog-title: 1.5rem;
 	--blog-author: 1rem;
 	--blog-date: 1rem;
@@ -43,6 +44,21 @@ a:hover {
 .app-container {
 	display: block;
 	overflow-x: hidden;
+}
+
+/* animation */
+.fadeUp {
+	animation: animFadeUp;
+}
+@keyframes animFadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }
 
 /* typography */

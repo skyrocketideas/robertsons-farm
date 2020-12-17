@@ -1,6 +1,7 @@
 import Axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import ScrollAnimation from "react-animate-on-scroll";
 import "../App.css";
 import "../styles/shop.css";
 
@@ -30,18 +31,20 @@ function ShopList() {
 			{shopData.data.map((item) => (
 				<li key={item._id} className="shop-item-container">
 					<Link to={`/shop/${item._id}`}>
-						{console.log("ITEM ddd", item._id)}
-						<div className="shop-item">
-							<div
-								className="shop-item__feat-img"
-								style={{
-									backgroundImage: `url(${item.ProductImage})`,
-								}}
-							></div>
-							<h2 className="shop-item__category">{item.ProductCategory}</h2>
-							<h1 className="shop-item__title">{item.ProductName}</h1>
-							<h3 className="shop-item__price">{item.ProductPrice}</h3>
-						</div>
+						<ScrollAnimation animateIn="fadeUp">
+							{console.log("ITEM ddd", item._id)}
+							<div className="shop-item">
+								<div
+									className="shop-item__feat-img"
+									style={{
+										backgroundImage: `url(${item.ProductImage})`,
+									}}
+								></div>
+								<h2 className="shop-item__category">{item.ProductCategory}</h2>
+								<h1 className="shop-item__title">{item.ProductName}</h1>
+								<h3 className="shop-item__price">{item.ProductPrice}</h3>
+							</div>
+						</ScrollAnimation>
 					</Link>
 				</li>
 			))}

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ScrollAnimation from "react-animate-on-scroll";
 import "../App.css";
 import "../styles/articleList.css";
 

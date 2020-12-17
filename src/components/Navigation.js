@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Logo from "../assets/logo/logo_robertsons_farm.svg";
 import "../App.css";
 import "../styles/navigation.css";
 
@@ -15,7 +16,7 @@ function Navigation() {
 					activeClassName="navbar__link--active"
 					to="/"
 				>
-					Farm Logo
+					<img src={Logo} alt="Robertsons Farm logo" className="navbar__logo" />
 				</Navbar.Brand>
 				<Navbar.Toggle
 					className="navbar__toggle"

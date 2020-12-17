@@ -2,3 +2,8 @@
 	border: none;
 	width: fit-content;
 }
+.navbar__logo {
+	width: auto;
+	height: 35px;
+	margin: 0.5rem 0;
+}

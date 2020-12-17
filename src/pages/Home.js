@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ArticleListData from "../components/ArticleListData";
 import ShopList from "../components/ShopList";
+import MailingList from "../components/MailingList";
 import Database from "../modules/Database";
 import { Button } from "../components/Button";
+import ScrollAnimation from "react-animate-on-scroll";
 import "../App.css";
 import "../styles/home.css";
 
@@ -35,40 +37,50 @@ function Home() {
 							})`,
 						}}
 					></div>
-					<h2 className="blog-post__category">
-						{feature[0] && feature[0]._embedded["wp:term"][0][0].name}
-					</h2>
-					<h1
-						className="blog-post__title"
-						dangerouslySetInnerHTML={{
-							__html: `${feature[0] && feature[0].title.rendered}`,
-						}}
-					></h1>
-					<p
-						className="blog-post__excerpt"
-						dangerouslySetInnerHTML={{
-							__html: `${feature[0] && feature[0].excerpt.rendered}`,
-						}}
-					></p>
-					<Button type="button" buttonStyle="btn__secondary--outline">
-						Read more
-					</Button>
+					<div className="blog-post__text-wrapper">
+						<h2 className="blog-post__category">
+							{feature[0] && feature[0]._embedded["wp:term"][0][0].name}
+						</h2>
+						<h1
+							className="blog-post__title"
+							dangerouslySetInnerHTML={{
+								__html: `${feature[0] && feature[0].title.rendered}`,
+							}}
+						></h1>
+						<p
+							className="blog-post__excerpt"
+							dangerouslySetInnerHTML={{
+								__html: `${feature[0] && feature[0].excerpt.rendered}`,
+							}}
+						></p>
+						<Button type="button" buttonStyle="btn__primary--solid">
+							Read more
+						</Button>
+					</div>
 				</Link>
 			</section>
-			<section className="home-section articles-section">
-				<h2>Latest Articles</h2>
-				<ArticleListData />
-			</section>
-			<section className="home-section">
-				<h2>Shop</h2>
-				<ShopList />
-			</section>
-			<section className="home-section">
-				<h2>Latest Products</h2>
-			</section>
-			<section className="home-section">
-				<h2>Mailing List</h2>
-			</section>
+			<ScrollAnimation animateIn="fadeUp">
+				<section className="home-section articles-section">
+					<h2>Latest Articles</h2>
+					<ArticleListData />
+				</section>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeUp">
+				<section className="home-section">
+					<h2>Shop</h2>
+					<ShopList />
+				</section>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeUp">
+				<section className="home-section">
+					<h2>Latest Products</h2>
+				</section>
+			</ScrollAnimation>
+			<ScrollAnimation animateIn="fadeUp">
+				<section className="home-section">
+					<MailingList />
+				</section>
+			</ScrollAnimation>
 		</div>
 	);
 }
