@@ -1,0 +1,12 @@
+.shop-single-item {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+}
+.shop-single-item__feat-img {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 50vh;
+	width: 100%;
+}
