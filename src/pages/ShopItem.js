@@ -30,12 +30,14 @@ function ShopItem({ match }) {
 
 	return (
 		<article className="shop-single-item">
-			<div
-				className="shop-single-item__feat-img"
-				style={{
-					backgroundImage: `url(${item.ProductImage})`,
-				}}
-			></div>
+			<div className="shop-single-item__img-container">
+				<div
+					className="shop-single-item__feat-img"
+					style={{
+						backgroundImage: `url(${item.ProductImage})`,
+					}}
+				></div>
+			</div>
 			<div className="shop-single-item__info">
 				<h1>{item.ProductName}</h1>
 				<h2>{item.ProductCategory}</h2>
