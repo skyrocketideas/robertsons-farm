@@ -20,3 +20,10 @@
 .shop-item__title {
 	font-size: var(--blog-title);
 }
+
+@media (min-width: 900px) {
+	.shop-list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
