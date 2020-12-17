@@ -13,6 +13,10 @@
 	--blog-title: 1.5rem;
 	--blog-author: 1rem;
 	--blog-date: 1rem;
+	--blog-item-category: 2rem;
+	--blog-item-title: 2rem;
+	--blog-item-author: 1rem;
+	--blog-item-date: 1rem;
 	--filter: grayscale(50%);
 	--base-color-1: 0;
 	--color-1-normal: hsla(var(--base-color-1), 0%, 0%, 100%);
@@ -29,6 +33,12 @@ html {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+}
+
+hr {
+	width: 50%;
+	margin: auto;
+	padding: 1rem;
 }
 
 /* link styles */
