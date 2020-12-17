@@ -8,7 +8,7 @@ function MailingList() {
 	return (
 		<div className="mailing-list">
 			<section className="mailing-list__intro">
-				<h3>Sign up to get the latest updates from Robertson's Farm</h3>
+				<h4>Sign up to get the latest updates from Robertson's Farm</h4>
 			</section>
 			<section className="mailing-list__form">
 				<Formik

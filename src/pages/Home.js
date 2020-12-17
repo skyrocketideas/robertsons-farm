@@ -70,7 +70,6 @@ function Home() {
 				<h2>Latest Products</h2>
 			</section>
 			<section className="home-section">
-				<h2>Mailing List</h2>
 				<MailingList />
 			</section>
 		</div>
