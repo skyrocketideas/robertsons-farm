@@ -1,0 +1,17 @@
+.mailing-list {
+	background-color: var(--color-1-light);
+	padding: var(--padding);
+}
+.mailing-list__intro {
+	text-align: center;
+}
+.form-inputs-group {
+	display: grid;
+	padding-bottom: 1rem;
+}
+label {
+	margin: 0;
+}
+.form-field {
+	padding: 0.5rem;
+}
