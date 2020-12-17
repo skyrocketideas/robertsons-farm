@@ -7,9 +7,16 @@ import "../styles/articleList.css";
 const ArticleList = function (props) {
 	const { repos } = props;
 	if (!repos || repos.length === 0) return <p>No repository, sorry.</p>;
+
 	return (
 		<ul className="blog-list">
 			{repos.map(function (repo) {
+				// convert date to human readable
+				const dateString = repo.date;
+				const formatDate = (dateString) => {
+					const options = { year: "numeric", month: "long", day: "numeric" };
+					return new Date(dateString).toLocaleDateString(undefined, options);
+				};
 				return (
 					<li key={repo.id} className="blog-post-container">
 						<Link to={`/blog/${repo.id}`}>
@@ -31,7 +38,7 @@ const ArticleList = function (props) {
 										}}
 									></h1>
 									<h3 className="blog-post__author">{repo.written_by}</h3>
-									<h4 className="blog-post__date">{repo.date}</h4>
+									<h4 className="blog-post__date">{formatDate(dateString)}</h4>
 								</div>
 							</div>
 						</Link>
