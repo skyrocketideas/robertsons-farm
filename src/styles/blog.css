@@ -1,0 +1,6 @@
+.blog-list {
+	display: block;
+}
+.blog-post-container:first-child {
+	background-color: white;
+}

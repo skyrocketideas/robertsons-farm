@@ -14,7 +14,6 @@
 	flex-direction: column;
 	justify-content: center;
 }
-
 @media (min-width: 900px) {
 	.shop-single-item {
 		display: grid;
