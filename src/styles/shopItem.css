@@ -1,8 +1,3 @@
-.shop-single-item {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 2rem;
-}
 .shop-single-item__img-container {
 	height: 600px;
 	padding: 2rem;
@@ -18,4 +13,12 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+@media (min-width: 900px) {
+	.shop-single-item {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+	}
 }
