@@ -1,0 +1,21 @@
+.shop-single-item {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+}
+.shop-single-item__img-container {
+	height: 600px;
+	padding: 2rem;
+}
+.shop-single-item__feat-img {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100%;
+	width: auto;
+}
+.shop-single-item__info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}

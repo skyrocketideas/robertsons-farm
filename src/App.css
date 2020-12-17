@@ -61,6 +61,14 @@ a:hover {
 	}
 }
 
+/* loading animation */
+.loading-container {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	width: auto;
+}
+
 /* typography */
 h1 {
 	font-family: var(--secondary-font);
@@ -76,4 +84,12 @@ h4 {
 }
 body {
 	font-family: var(--primary-font);
+}
+
+/* media queries */
+@media (min-width: 900px) {
+	.app-container {
+		max-width: 1200px;
+		margin: auto;
+	}
 }
