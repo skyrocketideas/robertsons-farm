@@ -1,6 +1,9 @@
 .home-section {
 	padding: var(--padding) 0;
 }
+.home-section > h2 {
+	padding: 0 1rem;
+}
 .feature-section__feat-img {
 	background-size: cover;
 	background-repeat: no-repeat;
