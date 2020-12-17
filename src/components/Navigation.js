@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Logo from "../assets/logo/logo_main_element.svg";
+import Logo from "../assets/logo/logo_robertsons_farm.svg";
 import "../App.css";
 import "../styles/navigation.css";
 
