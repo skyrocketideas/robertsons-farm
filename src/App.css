@@ -61,6 +61,13 @@ a:hover {
 	}
 }
 
+/* loading animation */
+.loading-container {
+	display: flex;
+	height: 100%;
+	width: auto;
+}
+
 /* typography */
 h1 {
 	font-family: var(--secondary-font);
