@@ -76,11 +76,9 @@ function Home() {
 					<h2>Latest Products</h2>
 				</section>
 			</ScrollAnimation>
-			<ScrollAnimation animateIn="fadeUp">
-				<section className="home-section">
-					<MailingList />
-				</section>
-			</ScrollAnimation>
+			<section className="home-section">
+				<MailingList />
+			</section>
 		</div>
 	);
 }

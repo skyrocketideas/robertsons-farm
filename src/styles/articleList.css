@@ -62,3 +62,18 @@
 .blog-post__date {
 	font-size: var(--blog-date);
 }
+
+@media (min-width: 900px) {
+	.blog-list {
+		display: grid;
+		grid-template-columns: 1rem;
+		grid-auto-flow: column;
+		grid-auto-columns: 20vw;
+		overflow-x: scroll;
+		scroll-behavior: smooth;
+		scroll-snap-type: x proximity;
+		gap: 2rem;
+		padding: 1rem 0 2rem 0;
+		list-style: none;
+	}
+}

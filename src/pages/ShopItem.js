@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
+import "../styles/shopItem.css";
 
 function ShopItem({ match }) {
 	// fetch data from database
@@ -28,18 +29,32 @@ function ShopItem({ match }) {
 	};
 
 	return (
-		<div>
-			<h1>Shop Item</h1>
-			<h2>{item.ProductName}</h2>
-			<h2>{item.ProductCategory}</h2>
-			<div
-				className="blog-post__feat-img"
-				style={{
-					backgroundImage: `url(${item.ProductImage})`,
-				}}
-			></div>
-			{/* <img src={dbImage} alt="" /> */}
-		</div>
+		<article className="shop-single-item">
+			<div className="shop-single-item__img-container">
+				<div
+					className="shop-single-item__feat-img"
+					style={{
+						backgroundImage: `url(${item.ProductImage})`,
+					}}
+				></div>
+			</div>
+			<div className="shop-single-item__info">
+				<h1>{item.ProductName}</h1>
+				<h2>{item.ProductCategory}</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam
+					consequatur unde atque non laudantium, recusandae expedita omnis vero
+					autem quas libero ipsam vitae voluptatum modi sequi quia odio
+					distinctio perspiciatis. Lorem ipsum dolor sit amet consectetur
+					adipisicing elit. Alias placeat impedit quae corporis exercitationem
+					nemo sint repudiandae magni repellendus voluptatem a nostrum corrupti
+					iste aspernatur fuga nobis delectus, doloribus unde. Lorem ipsum dolor
+					sit amet, consectetur adipisicing elit. Eius, asperiores atque? Earum
+					recusandae aut pariatur, cum ut ab ducimus culpa numquam doloremque
+					sunt, debitis porro fugit, architecto dolor sequi quo.
+				</p>
+			</div>
+		</article>
 	);
 }
 
