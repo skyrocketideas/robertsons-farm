@@ -1,8 +1,8 @@
-/* .blog-post-item {
+.blog-post-item {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 2rem;
-} */
+}
 .blog-post-item__intro {
 	text-align: center;
 }
