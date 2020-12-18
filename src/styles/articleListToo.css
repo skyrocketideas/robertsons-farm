@@ -19,7 +19,7 @@
 
 /* single article */
 .blog-post-container:first-child {
-	background-color: white;
+	background-color: var(--color-3-normal);
 }
 .blog-post {
 	display: grid;
@@ -28,6 +28,7 @@
 	scroll-snap-align: center;
 	height: 40vh;
 	padding: 1rem;
+	margin: 1rem 0;
 }
 .blog-post__feat-img {
 	grid-column: 1 / -1;
