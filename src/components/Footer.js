@@ -10,7 +10,6 @@ function Footer() {
 				<Link to="/shop">Shop</Link>
 				<Link to="/blog">Blog</Link>
 				<Link to="/about">Our story</Link>
-				<Link to="/contact">Contact</Link>
 			</section>
 			<section className="footer-section footer-section__social-links">
 				<a href="https://www.facebook.com/robertsonsfarmandapothecary">
