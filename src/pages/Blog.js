@@ -1,13 +1,13 @@
 import React from "react";
-import ArticleListData from "../components/ArticleListData";
+import ArticleListDataToo from "../components/ArticleListDataToo";
 import "../App.css";
-import "../styles/blog.css";
+// import "../styles/blog.css";
 
 function Blog() {
 	return (
 		<div>
 			<h1>Articles</h1>
-			<ArticleListData />
+			<ArticleListDataToo />
 		</div>
 	);
 }

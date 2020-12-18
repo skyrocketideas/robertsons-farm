@@ -72,9 +72,7 @@ function Home() {
 				</section>
 			</ScrollAnimation>
 			<ScrollAnimation animateIn="fadeUp">
-				<section className="home-section">
-					<h2>Latest Products</h2>
-				</section>
+				<section className="home-section"></section>
 			</ScrollAnimation>
 			<section className="home-section mailing-list">
 				<MailingList />

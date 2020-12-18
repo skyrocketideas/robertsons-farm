@@ -1,18 +1,20 @@
 .blog-post-item {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	max-width: 900px;
+	margin: auto;
 	gap: 2rem;
 }
 .blog-post-item__intro {
 	text-align: center;
 }
 .blog-post-item__feat-img {
-	background-size: cover;
+	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: center;
-	height: 40vh;
+	background-position: top center;
+	height: 50vh;
 	width: 100%;
-	margin: 2rem 0;
+	margin: 0rem 0;
+	filter: var(--filter);
 }
 /* target all items except feat-img */
 .blog-post-item > *:not(.blog-post-item__feat-img) {

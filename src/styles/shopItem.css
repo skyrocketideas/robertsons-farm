@@ -1,3 +1,7 @@
+.shop-single-item {
+	margin: 0 2rem;
+}
+
 .shop-single-item__img-container {
 	height: 600px;
 	padding: 2rem;
