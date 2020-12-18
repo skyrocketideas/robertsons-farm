@@ -24,7 +24,7 @@ function Navigation() {
 				></Navbar.Toggle>
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="ml-auto">
-						<Nav.Link
+						{/* <Nav.Link
 							eventKey="2"
 							as={Link}
 							className="navbar__link"
@@ -32,16 +32,7 @@ function Navigation() {
 							to="/about"
 						>
 							About
-						</Nav.Link>
-						<Nav.Link
-							eventKey="3"
-							as={Link}
-							className="navbar__link"
-							activeClassName="navbar__link--active"
-							to="/contact"
-						>
-							Contact
-						</Nav.Link>
+						</Nav.Link> */}
 						<Nav.Link
 							eventKey="4"
 							as={Link}
